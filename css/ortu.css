@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #090708;
+}
+
+/* HEADER NAVIGATION */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    width: 90px; 
+    padding: 5px;
+}
+
+/* Slogan */
+.slogan {
+    font-size: 20px; 
+    color: #f05a22;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+nav .navigation {
+    list-style: none;
+    display: flex;
+    gap: 10px; 
+}
+
+nav .navigation li {
+    position: relative;
+    margin: 0 10px;
+}
+
+nav .navigation a {
+    color: #090708;
+    text-decoration: none;
+    font-size: 14px; 
+    padding: 8px 12px;
+    display: block;
+}
+
+.navigation li .tmbl_login {
+    background-color: #f05a22; 
+    color: #fff;             
+    text-decoration: none;    
+    padding: 8px 16px;
+    border-radius: 5px;     
+    font-size: 16px;          
+    display: inline-block;    
+    transition: background-color 0.3s ease; 
+}
+
+.navigation li .tmbl_login:hover {
+    background-color: #090708; 
+    color: #fff;               
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-top: 2px solid #f05a22;
+    z-index: 10; /* Menambahkan z-index agar dropdown muncul di atas */
+}
+
+
+.dropdown_content ul {
+    display: inline-block;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_content li {
+    margin: 0;
+}
+
+.dropdown_content a {
+    color: #090708;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.dropdown_content a:hover {
+    color: #f05a22;
+}
+
+.dropdown:hover .dropdown_content {
+    display: flex;
+}
+
+
+/* BANNER */
+
+.slider {
+    width: 100%;
+    max-width: 800px; /* Sesuaikan max-width agar slider tidak terlalu lebar */
+    margin: 50px auto; /* Kurangi margin agar lebih proporsional */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+    animation: slideAnimation 12s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px; /* Kurangi tinggi gambar agar tidak terlalu besar */
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+
+/* Products */
+.container_brand1 h1 {
+    font-size: 1.8rem; 
+    padding: 1.2rem;
+    color: #f05a22;
+    text-align: center;
+}
+
+.container_brand h1 {
+    font-size: 1.8rem; 
+    padding: 1.2rem;
+    color: #f05a22;
+}
+
+.featured_products1 {
+    padding: 3rem 1.2rem;
+    text-align: center;
+}
+
+.featured_products {
+    padding: 3rem 1.2rem;
+    text-align: left;
+}
+
+.featured_products h2 {
+    font-size: 1.8rem; 
+    margin-bottom: 1.5rem;
+    color: #090708;
+}
+
+.products1 {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.products {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: left;
+    flex-wrap: wrap; 
+}
+
+.product {
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; 
+    max-width: 12.5rem;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.product p a {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+    color: #090708;
+}
+
+.product span {
+    display: block;
+    margin-top: 0.6rem; 
+}
+
+.product span a {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #f05a22;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product span a:hover {
+    background-color: #090708; 
+}
+
+.slider_container {
+    overflow-x: auto;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.products_slider {
+    display: flex;
+    gap: 1.2rem;
+    width: max-content;
+}
+
+.slider_container::-webkit-scrollbar {
+    display: none;
+}
+
+.slider_container {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+.cta_button {
+    background-color: #f05a22;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta_button:hover {
+    background-color: #090708;
+}
+
+/* ABOUT US */
+.about_us{
+    background-color:#f05a22;
+    padding: 80px;
+}
+
+.about_section {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px; 
+    padding: 20px;
+    text-align: justify;
+}
+
+.about_us h1{
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 25px;
+    color: #fff;
+}
+
+.toko_image {
+    width: 300px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.justify_paragraphs {
+    display: flex;
+    gap: 50px;
+    max-width: 1000px;
+}
+
+.justify_paragraphs p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    flex: 1;
+    color: #fff;
+}
+
+
+
+/* FORM */
+.untuk_form {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    color: #090708;
+    margin-bottom: 20px;
+}
+
+.untuk_form h2 {
+    font-size: 2rem;
+    color: #f05a22;
+    margin-bottom: 15px;
+}
+
+.untuk_form p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.untuk_form form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form_group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form_group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #090708;
+    margin-bottom: 5px;
+}
+
+.form_group input, .form_group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.tmbl_submit {
+    background-color: #f05a22;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tmbl_submit:hover {
+    background-color: #090708;
+}
+
+
+/* DEVELOPER PROFILE */
+.developer_profile {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    color: #090708;
+}
+
+.developer_profile h2 {
+    font-size: 2rem;
+    color: #f05a22;
+    margin-bottom: 20px;
+}
+
+.profile_div {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    gap: 20px;
+}
+
+.developer_photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: dotted #f05a22;
+}
+
+.profile_text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.profile_text b {
+    color: #090708;
+}
+
+.social_media {
+    margin-top: 15px;
+}
+
+.social_media a {
+    color: #f05a22;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.social_media a:hover {
+    color: #090708;
+}
+
+
+/* Footer */
+footer {
+    background-color: #090708;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_logo {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.footer_logo h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.baris_footer {
+    flex: 1;
+    min-width: 150px;
+    margin: 20px 0;
+}
+
+.baris_footer h3 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #f05a22;
+}
+
+.baris_footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.baris_footer ul li {
+    margin-bottom: 10px;
+}
+
+.baris_footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.icon_medsos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.icon_medsos p {
+    color: #fff;
+}
+
+.icon_medsos .medsos a i {
+    font-size: 30px;
+    color: #f05a22; 
+    margin: 0 10px;
+}
+
+.footnote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.footnote p {
+    color: #fff;
+    font-size: 0.8em;
+}
