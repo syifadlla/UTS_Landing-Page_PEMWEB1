@@ -80,7 +80,7 @@ nav .navigation a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-top: 2px solid #f05a22;
-    z-index: 10; /* Menambahkan z-index agar dropdown muncul di atas */
+    z-index: 10; 
 }
 
 
@@ -116,8 +116,8 @@ nav .navigation a {
 
 .slider {
     width: 100%;
-    max-width: 800px; /* Sesuaikan max-width agar slider tidak terlalu lebar */
-    margin: 50px auto; /* Kurangi margin agar lebih proporsional */
+    max-width: 800px;
+    margin: 50px auto; 
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -136,7 +136,7 @@ nav .navigation a {
 
 .slide img {
     width: 100%;
-    height: 400px; /* Kurangi tinggi gambar agar tidak terlalu besar */
+    height: 400px; 
     display: block;
     object-fit: cover;
     border-radius: 10px;
